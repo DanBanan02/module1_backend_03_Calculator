@@ -22,13 +22,18 @@ namespace Calculator
                 Console.SetCursorPosition(0, Console.CursorTop);
                 Console.Write($"Loading... {i}%   ");
             }
-            
+
             Console.ResetColor();
             Console.WriteLine();
+            Console.WriteLine("");
 
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("=== Calculator ===");
+            Console.ResetColor();
 
             // Calculate functions together = Result
+            Console.WriteLine("");
+            Console.WriteLine("");
             Console.Write("Calculate Task: ");
             string? input = Console.ReadLine();
 
