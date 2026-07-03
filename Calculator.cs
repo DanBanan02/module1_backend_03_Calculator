@@ -22,6 +22,7 @@ namespace Calculator
                 Console.SetCursorPosition(0, Console.CursorTop);
                 Console.Write($"Loading... {i}%   ");
             }
+            
             Console.ResetColor();
             Console.WriteLine();
 
@@ -34,7 +35,7 @@ namespace Calculator
             int Ioo = 100;
             char selector = ' ';
             
-            if (input.Contains('+'))
+            if (input!.Contains('+'))
                 selector = '+';
 
             else if (input.Contains('-'))
@@ -62,6 +63,7 @@ namespace Calculator
 
             double num1 = Convert.ToDouble(Numb[0]);
             double num2 = Convert.ToDouble(Numb[1]);
+            
 
 
             // Tells the number to begin at = Zero
@@ -107,6 +109,7 @@ namespace Calculator
 
                 default:
             Console.WriteLine("Invalid Input");
+
             return;  
             }
                 Console.ForegroundColor=ConsoleColor.Yellow;
@@ -121,7 +124,7 @@ namespace Calculator
 
                 foreach (char Numbers in result.ToString())
                 {
-                switch (Numbers)
+                    switch (Numbers)
                     {
                         case '1': letterResult += "A "; break;
                         case '2': letterResult += "B "; break;
